@@ -1,13 +1,12 @@
 import './App.css'
 
-function Hello() {
- const rend = <h2>Hello, World!</h2>
+function App() {
+  const hello = <h1>Hello, World!</h1>
 
   return (
-      <div>
-        {rend}
-      </div>
+    <div>
+      {hello}
+    </div>
   )
 }
-
-export default Hello
+export default App
