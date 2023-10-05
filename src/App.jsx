@@ -1,6 +1,2 @@
-function hello ({name}) {
-  return <h1>Hello, {name}</h1>
-}
-
-//Se la variabile name non viene passata alla funzione il suo valore sarà undefined
-//se la name variabile contiene un'espressione JSX viene renderizzato direttamente nel risultato finales
+const sum = (a, b) => a + b
+const result = <span>The result is {sum(11, 22)}</span>
