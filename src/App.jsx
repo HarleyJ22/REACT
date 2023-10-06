@@ -1,11 +1,12 @@
-import { Hello } from "./Hello";
-import { Message } from "./Message";
-import { Welcome } from "./Welcome";
+//import { Hello } from "./Hello";
+//import { Welcome } from "./Welcome";
+import { AlertClock } from "./AlertClock";
+
 function App() {
   return (
     <div>
-      <Hello />
-      <Welcome name={<strong>Giulia</strong>} />
+      {/* <Hello /> */}
+      {/* <Welcome name={<strong>Giulia</strong>} /> */}
       <AlertClock />
     </div>
   );

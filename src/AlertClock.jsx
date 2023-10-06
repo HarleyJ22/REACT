@@ -2,7 +2,7 @@ export function AlertClock() {
     function handleButtonClick() {
         const now = new Date()
 
-        alert(`The current time is ${now. toLocaleDateString()}`)
+        alert(`The current time is ${now.toLocaleTimeString()}`)
     }
 
     return (

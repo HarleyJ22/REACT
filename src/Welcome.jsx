@@ -1,4 +1,3 @@
-import {Age} from "./Age"
 
 function Welcome({ name, age }) {
     return (
