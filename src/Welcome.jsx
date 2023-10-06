@@ -4,7 +4,7 @@ function Welcome({ name, age }) {
     return (
         <>
           <p> Welcome, {name}!</p>
-        {age ? <Age age ={ age }/> : "Età non dichiarata" }
+        {18< age < 65 ? <Age age ={ age }/> : "L'età non rientra nei parametri richiesti" }
         </>
     )
 }
