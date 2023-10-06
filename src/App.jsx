@@ -1,14 +1,14 @@
 import { Hello } from "./Hello"
+import { Message } from "./Message"
+import { Welcome } from "./Welcome"
 
 function App() {
   return (
     <div>
       <Hello />
+      <Welcome name="Giulia"/>
     </div>
   )
 }
 export default App
 
-//sì, è possibiele usare il componente Hello più volte perché crea delle istanze indipendenti tra loro
-
-//Si può eseguire il rendering direttamente nel componente App così da riutilizzare Message
