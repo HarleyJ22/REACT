@@ -1,16 +1,11 @@
-import './App.css'
+import { Message } from "./Message";
 
 function Hello() {
- const rend = <h2>Hello, World!</h2>
-
   return (
-   <>
-    <div>
-        {rend}
-    <p>What a beautiful day!</p>
-    </div>
-   </> 
-  )
+      <div>
+        <h2>Hello, World!</h2>
+      </div>
+  );
 }
 
-export default Hello
+export default Hello;
