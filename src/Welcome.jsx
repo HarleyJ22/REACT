@@ -8,4 +8,3 @@ function Welcome({ name, age }) {
 }
 
 export default Welcome;
-

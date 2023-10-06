@@ -5,8 +5,11 @@ function App() {
   return (
     <div>
       <Hello />
-      <Welcome name={"Giulia"} age={22}/>
+      <Welcome name={<strong>Giulia</strong>} age={22}/>
     </div>
   )
 }
 export default App
+
+
+//se l'oggetto name diventa un'espressione jsx il file rimane invariato. 
