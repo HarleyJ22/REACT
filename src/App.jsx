@@ -1,13 +1,7 @@
-//import { Hello } from "./Hello";
-//import { Welcome } from "./Welcome";
-//import { AlertClock } from "./AlertClock";
+
 import { useState } from "react";
 
 function App() {
-  // function handleButtonClick() {
-  //     const now = new Date();
-  //     alert(`The current time is ${now.toLocaleTimeString()}`);
-  // }
   const [count, setCount] = useState(0);
   if (count == 0) {
     return (
@@ -18,12 +12,9 @@ function App() {
       </>
     );
   }
-
+//Il parametro deve essere una callback funzione, così da aggiornare i dati in ordine
   return (
     <div>
-      {/* <Hello /> */}
-      {/* <Welcome name={<strong>Giulia</strong>} /> */}
-      {/* <AlertClock buttonClick={handleButtonClick}/> */}
       <button onClick={() => setCount((count) => count + 1)}>
         count is <h2>{count}</h2>
       </button>
