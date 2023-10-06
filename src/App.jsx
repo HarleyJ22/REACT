@@ -11,5 +11,3 @@ function App() {
   );
 }
 export default App;
-
-//se l'oggetto name diventa un'espressione jsx il file rimane invariato.
