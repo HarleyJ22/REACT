@@ -1,9 +1,11 @@
-function Welcome({ name }) {
+function Welcome({ name, age }) {
     return (
-        <p> Welcome, {name}!</p>
+        <>
+          <p> Welcome, {name}!</p>
+          <p>Your age is {age}</p>
+        </>
     )
 }
 
 export default Welcome;
 
-//se al name non viene passato alcun valore la funzione non funzionerà, quindi si può impostare un valore predefinito
