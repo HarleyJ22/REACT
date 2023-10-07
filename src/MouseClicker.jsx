@@ -3,7 +3,7 @@ export function MouseClicker({ name }) {
     console.log(event.target.name);
   }
   function imageClick(event) {
-    console.log(event.target.src)
+    console.log(event.currentTarget.src)
   }
 
   return (
@@ -16,4 +16,4 @@ export function MouseClicker({ name }) {
   );
 }
 
-//Il name viene sempre stampato perché l'immagine è collegata ad un gestore eventi
+//Usiamo un currentTarget per far sì che l'evento sia collegato al pulsante e non all'immagine
