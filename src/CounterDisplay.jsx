@@ -1,6 +1,6 @@
 function CounterDisplay({count}) {
     return (
-        <h2>{count}</h2>
+        <h2>The counter is {count}</h2>
     )
 }
 
