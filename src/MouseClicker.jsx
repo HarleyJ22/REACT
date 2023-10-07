@@ -3,7 +3,7 @@ export function MouseClicker({ name }) {
     console.log(event.target.name);
   }
   function imageClick(event) {
-    console.log(event.currentTarget.src)
+    console.log(event.target.src)
   }
 
   return (
@@ -16,4 +16,4 @@ export function MouseClicker({ name }) {
   );
 }
 
-//Usiamo un currentTarget per far sì che l'evento sia collegato al pulsante e non all'immagine
+

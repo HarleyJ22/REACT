@@ -6,6 +6,7 @@ import Message from "./Message";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
 import { MouseClicker } from "./MouseClicker";
+import { MultiButton } from "./MultiButton";
 
 function App() {
   function handleButtonClick() {
@@ -36,7 +37,8 @@ function App() {
         decrementCount={decrementCount}
         reset={reset}
       />
-      <MouseClicker name ="one"/> 
+      <MouseClicker name="one"/>
+      <MultiButton nameOne ="one" nameTwo="two" nameThree="three" /> 
     </div>
   );
 }
