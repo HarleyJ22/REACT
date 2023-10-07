@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Clock } from "./Clock";
 import Message from "./Message";
 import Hello from "./Hello";
+import Welcome from "./Welcome";
+import { MouseClicker } from "./MouseClicker";
 
 function App() {
   function handleButtonClick() {
@@ -24,6 +26,7 @@ function App() {
   return (
     <div>
       <Hello/>
+      <Welcome name={<strong>John</strong>} age={22}/>
       <Message />
       <AlertClock buttonClick={handleButtonClick} />
       <Clock />
@@ -33,6 +36,7 @@ function App() {
         decrementCount={decrementCount}
         reset={reset}
       />
+      <MouseClicker name ="one"/> 
     </div>
   );
 }
