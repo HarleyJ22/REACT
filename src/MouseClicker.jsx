@@ -16,4 +16,4 @@ export function MouseClicker({ name }) {
   );
 }
 
-//Il name veien sempre stampato perché l'immagine è nel tag button
+//Il name viene sempre stampato perché l'immagine è collegata ad un gestore eventi
