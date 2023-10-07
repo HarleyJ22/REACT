@@ -9,9 +9,11 @@ export function MouseClicker({ name }) {
   return (
     <div>
       <button name={name} onClick={clickButton}>
-        Event
-      </button>
+        BUTTON
       <img onClick={imageClick} name="img" src="https://e7.pngegg.com/pngimages/510/25/png-clipart-blue-power-button-computer-icons-desktop-blue-power-button-icon-miscellaneous-trademark-thumbnail.png" width={50} height={60}/>
+    </button>
     </div>
   );
 }
+
+//Il name veien sempre stampato perché l'immagine è nel tag button
