@@ -6,9 +6,15 @@ function App() {
   function addOne() {
     setCount ((count) => count + 1)
   }
+  function decrementCount() {
+    setCount((count) => count - 1)
+  }
+  function reset() {
+    setCount(0)
+  }
 
   return  (
-  <Counter count={count} addOne={addOne}/>
+  <Counter count={count} addOne={addOne} decrementCount={decrementCount} reset={reset}/>
   )
 }
 
