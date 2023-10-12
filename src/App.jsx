@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Hello from "./Hello";
 
 function App() {
-  const hello = <h1>Hello, World!</h1>
-
   return (
     <div>
-      {hello}
+      <Hello />
     </div>
-  )
+  );
 }
-export default App
+
+export default App;
