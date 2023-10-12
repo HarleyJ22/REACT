@@ -1,15 +1,15 @@
-import { Hello } from "./Hello";
-import { Message } from "./Message";
-import { Welcome } from "./Welcome";
+import { AlertClock } from "./AlertClock";
+import Hello from "./Hello";
+import Welcome from "./Welcome";
+
 function App() {
   return (
     <div>
-      <Hello />
-      <Welcome name={<strong>Giulia</strong>} />
-      <AlertClock />
+      <Hello/>
+      <Welcome name={<strong>John</strong>} age={22}/>
+      <AlertClock/>
     </div>
   );
 }
 export default App;
 
-//se l'oggetto name diventa un'espressione jsx il file rimane invariato.
