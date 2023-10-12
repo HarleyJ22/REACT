@@ -1,11 +1,11 @@
 import { useState } from "react";
 
+ 
+
+function Login({ onLogin }) {
  function useData() {
     return { password: "", username: "", remember: false};
   }
-
-function Login({ onLogin }) {
- 
   const [data, setData] = useState(useData());
 
   function handleDataChange(event) {
@@ -24,9 +24,6 @@ function Login({ onLogin }) {
     onLogin(data);
   }
 
-  function handleReset() {
-    setData(useData());
-  }
   return (
     <div>
       <input
@@ -50,7 +47,6 @@ function Login({ onLogin }) {
       <button disabled={!data.username || !data.password} onClick={handleLogin}>
         Login
       </button>
-      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
