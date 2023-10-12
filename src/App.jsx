@@ -1,12 +1,12 @@
-import { Hello } from "./Hello"
+import Hello from "./Hello"
 
 function App() {
   return (
     <div>
-      <Hello />
+      <Hello/>
     </div>
   )
 }
 export default App
 
-//sì, è possibiele usare il componente Hello più volte perché crea delle istanze indipendenti tra loro 
+//sì, è possibile usare il componente Hello più volte perché crea delle istanze indipendenti tra loro 
