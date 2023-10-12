@@ -1,6 +1,6 @@
 function Age({age}) {
     return (
-        <p> Your age is { age }</p>
+        <p> Your age is {age}</p>
     )
 }
 
