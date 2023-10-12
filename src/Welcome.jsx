@@ -1,4 +1,4 @@
-import {Age} from "./Age"
+import Age from "./Age";
 
 function Welcome({ name, age }) {
     return (
