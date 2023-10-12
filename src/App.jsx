@@ -1,3 +1,4 @@
+import './App.css';
 import Counter from "./Counter";
 import { AlertClock } from "./AlertClock";
 import { useState } from "react";
@@ -5,9 +6,12 @@ import { Clock } from "./Clock";
 import Message from "./Message";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
+
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import Login from "./Login";
+import Age from './Age';
 
 function App() {
   function handleButtonClick() {
@@ -28,7 +32,8 @@ function App() {
   return (
     <div>
       <Hello/>
-      <Welcome age={22}/>
+      <Welcome name ="Giulia"/>
+      <Age age={22}/>
       <Message />
       <AlertClock buttonClick={handleButtonClick} />
       <Clock />
@@ -41,6 +46,7 @@ function App() {
       <MouseClicker name="one"/>
       <MultiButton nameOne ="one" nameTwo="two" nameThree="three" /> 
       <InteractiveWelcome/>
+      <Login/>
     </div>
   );
 }
