@@ -1,9 +1,11 @@
 import { useState } from "react";
 
-function Login({ onLogin }) {
- function useData() {
+function useData() {
     return { password: "", username: "", remember: false};
   }
+
+function Login({ onLogin }) {
+ 
   const [data, setData] = useState(useData());
 
   function handleDataChange(event) {
@@ -18,12 +20,18 @@ function Login({ onLogin }) {
       };
     });
   }
-  function handleLogin() {
+  function handleLogin(event) {
+    //preventdefaults
+    event.preventDefault();
     onLogin(data);
+  }
+  function handleReset() {
+    setData(useData());
   }
 
   return (
     <div>
+      <form onSubmit={handleLogin} action="#"></form>
       <input
         type="text"
         name="username"
@@ -45,6 +53,7 @@ function Login({ onLogin }) {
       <button disabled={!data.username || !data.password} onClick={handleLogin}>
         Login
       </button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
