@@ -7,6 +7,7 @@ import Hello from "./Hello";
 import Welcome from "./Welcome";
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 function App() {
   function handleButtonClick() {
@@ -27,7 +28,7 @@ function App() {
   return (
     <div>
       <Hello/>
-      <Welcome name={<strong>John</strong>} age={22}/>
+      <Welcome age={22}/>
       <Message />
       <AlertClock buttonClick={handleButtonClick} />
       <Clock />
@@ -39,6 +40,7 @@ function App() {
       />
       <MouseClicker name="one"/>
       <MultiButton nameOne ="one" nameTwo="two" nameThree="three" /> 
+      <InteractiveWelcome/>
     </div>
   );
 }
