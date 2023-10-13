@@ -9,3 +9,4 @@ function UncontrolledLogin() {
     </form>
   );
 }
+export default UncontrolledLogin
