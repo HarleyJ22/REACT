@@ -11,6 +11,7 @@ import { MultiButton } from "./MultiButton";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import Login from "./Login";
 import Age from "./Age";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 function App() {
   function handleButtonClick() {
@@ -49,6 +50,7 @@ function App() {
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
+      <UncontrolledLogin/>
     </div>
   );
 }
