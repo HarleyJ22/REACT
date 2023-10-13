@@ -22,3 +22,5 @@ function UncontrolledLogin() {
 }
 
 export default UncontrolledLogin
+
+//L'API standard è l'API DOM, esistono API non standard ma sono sconsigliate per via dell'incompatibilità trai browser  
