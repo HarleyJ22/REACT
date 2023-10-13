@@ -31,7 +31,7 @@ function Login({ onLogin }) {
 
   return (
     <div>
-      <form onSubmit={handleLogin} action="#"></form>
+      <form onSubmit={handleLogin} action="#">
       <input
         type="text"
         name="username"
@@ -54,6 +54,7 @@ function Login({ onLogin }) {
         Login
       </button>
       <button onClick={handleReset}>Reset</button>
+      </form>
     </div>
   );
 }
