@@ -1,12 +1,13 @@
 function UncontrolledLogin() {
   function hanldeFormSubmit(event) {
     event.preventDefault();
-    const username = event.target.elements.namedItem('username').value;
-    const password = event.target.elements.namedItem('password').value;
+    const formData = new FormData(event.target);
+
     const data = {
-      username,
-      password
-    }
+    username: formData.get('username'),
+    password:formData.get('password'),
+    checkbox: formData.get('remember') === "on" ? true : false,
+   };
     console.log(data);
   }
 
