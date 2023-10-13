@@ -3,6 +3,7 @@ function UncontrolledLogin() {
     event.preventDefault();
     const username = event.target.elements.namedItem('username').value;
     const password = event.target.elements.namedItem('password').value;
+    const checkbox = event.target.remember.checked;
     const data = {
       username,
       password
