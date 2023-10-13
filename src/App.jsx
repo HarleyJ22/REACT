@@ -1,7 +1,7 @@
 import "./App.css";
 import Counter from "./Counter";
 import { AlertClock } from "./AlertClock";
-import { useState } from "react";
+import { StrictMode, useState } from "react";
 import { Clock } from "./Clock";
 import Message from "./Message";
 import Hello from "./Hello";
@@ -51,6 +51,7 @@ function App() {
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
       <FocusableInput/>
+      <StrictMode/>
     </div>
   );
 }
