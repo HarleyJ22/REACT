@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import CounterDisplay from "./CounterDisplay";
 
-function Counter({count, addOne, decrementCount, reset}) {
-  useEffect(()=>{ console.log(count)}, [count])
+function Counter({ count, addOne, decrementCount, reset }) {
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
   return (
     <div>
       <CounterDisplay count={count} />
