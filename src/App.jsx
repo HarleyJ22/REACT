@@ -1,11 +1,11 @@
 import "./App.css";
 import Counter from "./Counter";
 import { AlertClock } from "./AlertClock";
-import { StrictMode, useState } from "react";
 import { Clock } from "./Clock";
 import Message from "./Message";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
+import { useState } from "react";
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
 import { InteractiveWelcome } from "./InteractiveWelcome";
@@ -51,7 +51,6 @@ function App() {
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
       <FocusableInput/>
-      <StrictMode/>
     </div>
   );
 }
