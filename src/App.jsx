@@ -1,8 +1,8 @@
 import "./App.css";
 import Counter from "./Counter";
 import { AlertClock } from "./AlertClock";
-import { StrictMode, useState } from "react";
-import { Clock } from "./Clock";
+import Clock from "./Clock";
+import { useState } from "react";
 import Message from "./Message";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
