@@ -12,6 +12,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import Login from "./Login";
 import Age from "./Age";
 import FocusableInput from "./FocusableInput";
+import Colors from "./Colors";
 
 function App() {
   function handleButtonClick() {
@@ -51,7 +52,7 @@ function App() {
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
       <FocusableInput/>
-      <StrictMode/>
+      <Colors items= {["Pink", "Black", "Green", "Purple"]}/>
     </div>
   );
 }
