@@ -73,7 +73,7 @@ function App() {
           },
         ]}
       />
-      <ToDoList/>
+      <ToDoList />
     </div>
   );
 }
