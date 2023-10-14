@@ -1,12 +1,12 @@
+import Color from "./Color";
+
 function Colors({ items }) {
   return (
-    <>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {items.map((item) => (
+        <Color key={item.id} item={item} />
+      ))}
+    </ul>
   );
 }
 
