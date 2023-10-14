@@ -10,11 +10,11 @@ function ToDoList() {
   return (
     <div>
       <ul>
-        {items.map((id, item) => (
-          <li key={id}>{item}</li>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
-      <imput ref={inputRef} type="text" />
+      <input ref={inputRef} type="text" />
       <button onClick={handleButton}>Add value</button>
     </div>
   );
