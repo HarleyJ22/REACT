@@ -51,8 +51,27 @@ function App() {
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
-      <FocusableInput/>
-      <Colors items= {["Pink", "Black", "Green", "Purple"]}/>
+      <FocusableInput />
+      <Colors
+        items={[
+          {
+            id: 0,
+            name: "Jane",
+          },
+          {
+            id: 1,
+            name: "Elizabeth",
+          },
+          {
+            id: 2,
+            name: "Emma",
+          },
+          {
+            id: 3,
+            name: "Emily",
+          },
+        ]}
+      />
     </div>
   );
 }
