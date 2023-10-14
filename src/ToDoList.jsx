@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useState } from "react";
+import classes from "./toDoList.module.scss"
 
 function ToDoList() {
   const [items, setItems] = useState([]);
@@ -22,15 +23,15 @@ function ToDoList() {
     <>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>
+          <li className={classes.index} key={index}>
             {item}
-            <button onClick={() => handleRemove(index)}>Remove</button>
+            <button className={classes.button} onClick={() => handleRemove(index)}>Remove</button>
           </li>
         ))}
       </ul>
-      <input ref={inputRef} type="text" />
-      <button onClick={handleButton}>Add value</button>
-      <button onClick={handleReset}>Reset</button>
+      <input className={classes.input}ref={inputRef} type="text" />
+      <button className={classes.button} onClick={handleButton}>Add value</button>
+      <button className={classes.button} onClick={handleReset}>Reset</button>
     </>
   );
 }
