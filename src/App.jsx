@@ -13,6 +13,7 @@ import Login from "./Login";
 import Age from "./Age";
 import FocusableInput from "./FocusableInput";
 import Colors from "./Colors";
+import ToDoList from "./ToDoList";
 
 function App() {
   function handleButtonClick() {
@@ -72,6 +73,7 @@ function App() {
           },
         ]}
       />
+      <ToDoList/>
     </div>
   );
 }
