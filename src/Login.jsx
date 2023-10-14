@@ -34,6 +34,7 @@ function Login({ onLogin }) {
         onChange={handleDataChange}
       />
       <input
+        style={{ backgroundColor: data.password.length > 8 ? "lightgreen" : "red"} }
         type="password"
         name="password"
         value={data.password}
