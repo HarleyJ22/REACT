@@ -15,8 +15,13 @@ import FocusableInput from "./FocusableInput";
 import Colors from "./Colors";
 import ToDoList from "./ToDoList";
 import { Container } from "./Container";
+import { LanguageContext } from "./LanguageContext";
 
 function App() {
+  const [language, setLanguage] = useState('en')
+    function handleSetLanguage(language) {
+      setLanguage(language)
+  }
   function handleButtonClick() {
     const now = new Date();
     alert(`The current time is ${now.toLocaleTimeString()}`);
@@ -36,13 +41,23 @@ function App() {
   }
 
   return (
+    <>
     <Container title="MY CONTAINER">
       <Hello />
       <Welcome name="Giulia" />
       <Age age={22} />
       <Message />
       <AlertClock buttonClick={handleButtonClick} />
+      <LanguageContext.Provider value={language}>
+        <select onChange={() => handleSetLanguage('en')}
+        name="language"
+        id="language"
+        >
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+        </select>
       <Clock />
+      </LanguageContext.Provider>
       <Counter
         count={count}
         addOne={addOne}
@@ -74,8 +89,10 @@ function App() {
           },
         ]}
       />
-      <ToDoList />
+      <ToDoList /> 
     </Container>
+   
+  </>
   );
 }
 
