@@ -14,6 +14,7 @@ import Age from "./Age";
 import FocusableInput from "./FocusableInput";
 import Colors from "./Colors";
 import ToDoList from "./ToDoList";
+import { Container } from "./Container";
 
 function App() {
   function handleButtonClick() {
@@ -35,7 +36,7 @@ function App() {
   }
 
   return (
-    <div>
+    <Container>
       <Hello />
       <Welcome name="Giulia" />
       <Age age={22} />
@@ -74,7 +75,7 @@ function App() {
         ]}
       />
       <ToDoList />
-    </div>
+    </Container>
   );
 }
 
