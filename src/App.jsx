@@ -15,7 +15,6 @@ import FocusableInput from "./FocusableInput";
 import Colors from "./Colors";
 import ToDoList from "./ToDoList";
 import { Container } from "./Container";
-import { LanguageContext } from "./LanguageContext";
 
 function App() {
   const [language, setLanguage] = useState('en')
@@ -48,7 +47,7 @@ function App() {
       <Age age={22} />
       <Message />
       <AlertClock buttonClick={handleButtonClick} />
-      <LanguageContext.Provider value={language}>
+      {/* Eliminando il provider, il componente Clock manterrà il valore originale del context */}
         <select onChange={() => handleSetLanguage('IT')}
         name="language"
         id="language"
@@ -57,7 +56,7 @@ function App() {
           <option value="it">IT</option>
         </select>
       <Clock />
-      </LanguageContext.Provider>
+      
       <Counter
         count={count}
         addOne={addOne}
