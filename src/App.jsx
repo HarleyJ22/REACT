@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <Container>
+    <Container title="MY CONTAINER">
       <Hello />
       <Welcome name="Giulia" />
       <Age age={22} />
