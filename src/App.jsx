@@ -49,7 +49,7 @@ function App() {
       <Message />
       <AlertClock buttonClick={handleButtonClick} />
       <LanguageContext.Provider value={language}>
-        <select onChange={() => handleSetLanguage('en')}
+        <select onChange={() => handleSetLanguage('IT')}
         name="language"
         id="language"
         >
