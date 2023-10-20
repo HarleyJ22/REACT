@@ -15,7 +15,7 @@ import FocusableInput from "./FocusableInput";
 import Colors from "./Colors";
 import ToDoList from "./ToDoList";
 import { Container } from "./Container";
-import { GithubUser } from "./GithubUser";
+import { GithubUsers } from "./GithubUesrs";
 
 function App() {
   const [language, setLanguage] = useState("en");
@@ -91,7 +91,7 @@ function App() {
           ]}
         />
         <ToDoList />
-        <GithubUser username="MirianaJ" />
+        <GithubUsers/>
       </Container>
     </>
   );
