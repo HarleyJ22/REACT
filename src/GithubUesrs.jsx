@@ -2,25 +2,25 @@ import { useRef, useState } from "react"
 import { GithubUser } from "./GithubUser";
 
 export const GithubUsers = () => {
-    const [user, setUser] = useState("");
-    const [userList, setUserList] = useState([]);
+    const [users, setUsers] = useState("");
+    const [usersList, setUsersList] = useState([]);
     const inputRef = useRef();
 
     const handleSearch = () => {
-        setUserList((prevUserList) => [...prevUserList, user]);
+        setUsersList((prevUserList) => [...prevUserList, users]);
         inputRef.current.value = "";
     }
 
     return (
      <>
         <form>
-            <input type="text" ref={inputRef} value={user} onChange={(event) =>setUser(event.target.value)} />
+            <input type="text" ref={inputRef} value={users} onChange={(event) =>setUsers(event.target.value)} />
             <button onClick={handleSearch}>Search User</button>
         </form>
        <ul>
-        {userList.map((user, index) => (
+        {usersList.map((users, index) => (
             <li key={index}>
-                <GithubUser username={user}/>            
+                <GithubUser username={users}/>            
             </li>
         ))}
        </ul>
