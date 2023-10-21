@@ -15,7 +15,7 @@ import FocusableInput from "./FocusableInput";
 import Colors from "./Colors";
 import ToDoList from "./ToDoList";
 import { Container } from "./Container";
-import { GithubUsers } from "./GithubUesrs";
+import { GithubUsers } from "./GithubUsers";
 
 function App() {
   const [language, setLanguage] = useState("en");
