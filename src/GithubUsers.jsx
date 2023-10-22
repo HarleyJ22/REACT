@@ -1,29 +1,46 @@
-import { useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { GithubUser } from "./GithubUser";
 
-export const GithubUsers = () => {
+const GithubUsers = () => {
     const [users, setUsers] = useState("");
     const [usersList, setUsersList] = useState([]);
-    const inputRef = useRef();
 
-    const handleSearch = () => {
-        setUsersList((prevUserList) => [...prevUserList, users]);
-        inputRef.current.value = "";
-    }
+    useEffect(() => {
+        const fetchUser = async() => {
+        try {
+            const response = await fetch(`https://api.github.com/users/`);
+            if (response.ok) {
+                const user = await response.json();
+                setUsers(user);
+            } else {
+                console.log(error)
+            }
+        } catch(error) {
+            console.log(error);
+        }
+    } 
+        fetchUser();
+    }, [])
 
     return (
      <>
-        <form>
-            <input type="text" ref={inputRef} value={users} onChange={(event) =>setUsers(event.target.value)} />
-            <button onClick={handleSearch}>Search User</button>
-        </form>
+     <div>
        <ul>
-        {usersList.map((users, index) => (
-            <li key={index}>
-                <GithubUser username={users}/>            
+        {users.map((user) => (
+            <li key={user.login}
+                onClick={() => setUsersList(user.login)}
+                style={{cursor: "pointer"}}
+                >
+                {user.login}       
             </li>
         ))}
        </ul>
+       </div>
+       <div>
+        {usersList && <GithubUser username={usersList}/>}
+       </div>
     </>
     )
 }
+
+export default GithubUsers
