@@ -1,6 +1,18 @@
+import { useState } from "react";
 import CounterDisplay from "./CounterDisplay";
 
-function Counter({count, addOne, decrementCount, reset}) {
+function Counter({ initialValue, addOne, decrementCount, reset }) {
+  const [count, setCount] = useState(initialValue);
+  function addOne() {
+    setCount((count) => count + 1);
+  }
+  function decrementCount() {
+    setCount((count) => count - 1);
+  }
+  function reset() {
+    setCount(initialValue);
+  }
+
   return (
     <div>
       <CounterDisplay count={count} />

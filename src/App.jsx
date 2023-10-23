@@ -1,21 +1,7 @@
-import Counter from "./Counter"
-import { useState } from "react"
+import Counter from "./Counter";
 
 function App() {
-  const [count, setCount] = useState(0)
-  function addOne() {
-    setCount ((count) => count + 1)
-  }
-  function decrementCount() {
-    setCount((count) => count - 1)
-  }
-  function reset() {
-    setCount(0)
-  }
-
-  return  (
-  <Counter count={count} addOne={addOne} decrementCount={decrementCount} reset={reset}/>
-  )
+  return <Counter initialValue={0} />;
 }
 
-export default App
+export default App;
