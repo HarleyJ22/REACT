@@ -6,9 +6,9 @@ export function MouseClicker({ name }) {
   return (
     <div>
       <button name={name} onClick={clickButton}>
-        Event
+        Button
+        <img name="img" width={20} height={20} />
       </button>
-      <img name="img" width={20} height={20}/>
     </div>
   );
 }
