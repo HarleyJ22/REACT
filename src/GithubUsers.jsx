@@ -8,7 +8,7 @@ const GithubUsers = () => {
     useEffect(() => {
         const fetchUser = async() => {
         try {
-            const response = await fetch(`https://api.github.com/users/`);
+            const response = await fetch("https://api.github.com/users");
             if (response.ok) {
                 const user = await response.json();
                 setUsers(user);
