@@ -1,6 +1,6 @@
-function CounterDisplay({count,counterRef}) {
+function CounterDisplay({count}) {
     return (
-     <h2>ref = {counterRef}{count}</h2>
+     <h2>Counter: {count}</h2>
     )
 }
 

@@ -41,10 +41,7 @@ function App() {
       <AlertClock buttonClick={handleButtonClick} />
       <Clock />
       <Counter
-        count={count}
-        addOne={addOne}
-        decrementCount={decrementCount}
-        reset={reset}
+        initialValue={0}
       />
       <MouseClicker name="one" />
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
