@@ -1,46 +1,48 @@
-import { useEffect, useState } from "react"
-import { GithubUser } from "./GithubUser";
+import React, { useState, useEffect } from "react";
+import GithubUser from "./GitHubUser";
 
 const GithubUsers = () => {
-    const [users, setUsers] = useState("");
-    const [usersList, setUsersList] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [userList, setuserList] = useState(null);
 
-    useEffect(() => {
-        const fetchUser = async() => {
-        try {
-            const response = await fetch("https://api.github.com/users");
-            if (response.ok) {
-                const user = await response.json();
-                setUsers(user);
-            } else {
-                console.log(error)
-            }
-        } catch(error) {
-            console.log(error);
+  useEffect(() => {
+    const fetchUserList = async () => {
+      try {
+        const response = await fetch("https://api.github.com/users");
+        if (response.ok) {
+          const userList = await response.json();
+          setUsers(userList);
+        } else {
+          console.log(error);
         }
-    } 
-        fetchUser();
-    }, [])
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-    return (
-     <>
-     <div>
-       <ul>
-        {users.map((user) => (
-            <li key={user.login}
-                onClick={() => setUsersList(user.login)}
-                style={{cursor: "pointer"}}
-                >
-                {user.login}       
+    fetchUserList();
+  }, []);
+
+  return (
+    <>
+      <div>
+        <ul>
+          {users.map((user) => (
+            <li
+              key={user.login}
+              onClick={() => setuserList(user.login)}
+              style={{ cursor: "pointer" }}
+            >
+              {user.login}
             </li>
-        ))}
-       </ul>
-       </div>
-       <div>
-        {usersList && <GithubUser username={usersList}/>}
-       </div>
+          ))}
+        </ul>
+      </div>
+      <div >
+        {userList && <GithubUser username={userList} />}
+      </div>
     </>
-    )
-}
+  );
+};
 
-export default GithubUsers
+export default GithubUsers;

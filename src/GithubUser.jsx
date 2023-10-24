@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export function GithubUser({ username }) {
-  const [user, setuser] = useState(null);
+function GithubUser({ username }) {
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchUserData = async () => {
       try {
         const response = await fetch(
           `https://api.github.com/users/${username}`
         );
         if (response.ok) {
           const userData = await response.json();
-          setuser(userData);
+          setUser(userData);
         } else {
           console.log(error);
         }
@@ -19,14 +19,21 @@ export function GithubUser({ username }) {
         console.log(error);
       }
     };
-    fetchUser();
+
+    fetchUserData();
   }, [username]);
+
+  if (!user) {
+    return <div>User not Found!</div>;
+  }
 
   return (
     <div>
-        {user &&<h1>{user.login}</h1>}
-        {user &&<h1>{user.username}</h1>}
-        {user &&<h2>{user.avatar_url}</h2>}
+      <img src={user.avatar_url} alt={user.login} />
+      <h2>Name: {user.name}</h2>
+      <h2>Login: {user.login}</h2>
     </div>
   );
 }
+
+export default GithubUser;
