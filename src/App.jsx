@@ -16,6 +16,7 @@ import Colors from "./Colors";
 import ToDoList from "./ToDoList";
 import { Container } from "./Container";
 import { GithubUsers } from "./GithubUsers";
+import HookCounter from "./HookCounter";
 
 function App() {
   const [language, setLanguage] = useState("en");
@@ -60,10 +61,7 @@ function App() {
         <Clock />
 
         <Counter
-          count={count}
-          addOne={addOne}
-          decrementCount={decrementCount}
-          reset={reset}
+          initialValue={0}
         />
         <MouseClicker name="one" />
         <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
@@ -92,6 +90,7 @@ function App() {
         />
         <ToDoList />
         <GithubUsers/>
+        <HookCounter/>
       </Container>
     </>
     
