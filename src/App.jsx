@@ -1,13 +1,10 @@
 import "./App.css";
-import { Container } from "./Container";
-import PersonalHook from "./PersonalHook";
+import GithubUser from "./GithubUser";
 
 function App() {
   return (
     <>
-      <Container>
-        <PersonalHook />
-      </Container>
+  <GithubUser username="HarleyJ22"/>
     </>
   );
 }
