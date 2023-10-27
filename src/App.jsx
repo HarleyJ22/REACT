@@ -1,12 +1,16 @@
 import "./App.css";
-import CurrentPosition from "./CurrentPosition";
-import GithubUser from "./GithubUser";
+import { Route, Routes } from "react-router-dom";
+import Welcome from "./Welcome";
+import { Container } from "postcss";
 
 function App() {
   return (
     <>
-      <GithubUser username="HarleyJ22" />
-      <CurrentPosition/>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Welcome name="Giulia" />} />
+        </Routes>
+     </Container>
     </>
   );
 }
