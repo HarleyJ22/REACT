@@ -1,7 +1,7 @@
 function Welcome({ name }) {
     return (
         <>
-          <p className="background"> Welcome, {name}</p>
+          <p> Welcome, {name}</p>
         </>
     )
 }

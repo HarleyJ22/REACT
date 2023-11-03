@@ -1,7 +1,10 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { Root } from 'postcss';
+import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Root from "./Root";
 
-const root = createRoot(document.getElementById("root"));
-
-root.render (<Root/>)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <Root />
+  </React.StrictMode>
+);
