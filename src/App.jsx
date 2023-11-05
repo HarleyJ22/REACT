@@ -29,7 +29,6 @@ const App = () => {
           <Route index element={<button>Add a user and select it</button>} />
           <Route path=":username" element={<ShowGithubUser />} />
         </Route>
-        <Route path="/search/:username" element={<ShowGithubUser/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
