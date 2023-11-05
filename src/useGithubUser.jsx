@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const fetcher = async (url) => {
@@ -10,6 +9,13 @@ const fetcher = async (url) => {
 };
 
 const useGithubUser = (username) => {
+  if(!username) {
+    return {
+      user: null,
+      loading: false,
+      error: "Request failed",
+    }
+  }
   const { data: user, error } = useSWR(
     `https://api.github.com/users/${username}`,
     fetcher
