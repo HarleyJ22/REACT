@@ -15,19 +15,10 @@ const NotFound = () => (
 const App = () => {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/counter">Counter</Link>
-          </li>
-          <li>
-            <Link to="/users">Github Users</Link>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> |{" "}
+        <Link to="/users">Github Users</Link> 
+      </div>
       <Routes>
         <Route path="/" element={<Welcome name="Giulia" />} />
         <Route
@@ -35,9 +26,10 @@ const App = () => {
           element={<Counter initialValue={0} addOne={1} decrementCount={1} />}
         />
         <Route path="/users" element={<GithubUsers />}>
-          <Route index element={<button>Add a user and select it</button>}/>
+          <Route index element={<button>Add a user and select it</button>} />
           <Route path=":username" element={<ShowGithubUser />} />
         </Route>
+        <Route path="/search/:username" element={<ShowGithubUser/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
