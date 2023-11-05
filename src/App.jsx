@@ -1,9 +1,10 @@
 import "./App.css";
+import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
-import { ShowGithubUser } from "./ShowGitubUser";
 import { GithubUsers } from "./GithubUsers";
+import { ShowGithubUser } from "./ShowGitubUser";
 
 const NotFound = () => (
   <div>
@@ -34,6 +35,7 @@ const App = () => {
           element={<Counter initialValue={0} addOne={1} decrementCount={1} />}
         />
         <Route path="/users" element={<GithubUsers />}>
+          <Route index element={<button>Add a user and select it</button>}/>
           <Route path=":username" element={<ShowGithubUser />} />
         </Route>
         <Route path="*" element={<NotFound />} />
