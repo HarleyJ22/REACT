@@ -3,6 +3,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
 import { ShowGithubUser } from "./ShowGitubUser";
+import { GithubUsers } from "./GithubUsers";
 
 const NotFound = () => (
   <div>
@@ -22,7 +23,7 @@ const App = () => {
             <Link to="/counter">Counter</Link>
           </li>
           <li>
-            <Link to="/users/HarleyJ22">Miriana Falcone</Link>
+            <Link to="/users">Github Users</Link>
           </li>
         </ul>
       </nav>
@@ -32,7 +33,9 @@ const App = () => {
           path="counter"
           element={<Counter initialValue={0} addOne={1} decrementCount={1} />}
         />
-        <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="/users" element={<GithubUsers />}>
+          <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

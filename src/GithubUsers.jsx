@@ -1,29 +1,39 @@
-import { useRef, useState } from "react"
-import { GithubUser } from "./GithubUser";
+import { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 export const GithubUsers = () => {
-    const [users, setUsers] = useState("");
-    const [usersList, setUsersList] = useState([]);
-    const inputRef = useRef();
+  const [users, setUsers] = useState([]);
 
-    const handleSearch = () => {
-        setUsersList((prevUserList) => [...prevUserList, users]);
-        inputRef.current.value = "";
-    }
+  useEffect(() => {
+    const fetchList = async () => {
+      try {
+        const response = await fetch("https://api.github.com/users");
+        if (response.ok) {
+          const usersList = await response.json();
+          setUsers(usersList);
+        } else {
+          console.log("Error");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-    return (
-     <>
-        <form>
-            <input type="text" ref={inputRef} value={users} onChange={(event) =>setUsers(event.target.value)} />
-            <button onClick={handleSearch}>Search User</button>
-        </form>
-       <ul>
-        {usersList.map((users, index) => (
-            <li key={index}>
-                <GithubUser username={users}/>            
-            </li>
+    fetchList();
+  }, []);
+
+  return (
+    <div>
+      <ul>
+        {users.map((user) => (
+          <li key={user.login}>
+            <Link to={`/users/${user.login}`}>{user.login}</Link>
+          </li>
         ))}
-       </ul>
-    </>
-    )
-}
+      </ul>
+      <div>
+        <Outlet />
+      </div>
+    </div>
+  );
+};
