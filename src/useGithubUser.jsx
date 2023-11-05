@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const fetcher = async (url) => {
@@ -18,7 +17,7 @@ const useGithubUser = (username) => {
   return {
     user,
     loading: !user && !error,
-    error: error || (user ? null : "User not found"),
+    error
   };
 };
 
